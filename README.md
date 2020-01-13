@@ -5,6 +5,9 @@ commit-msg is a repository for pre-commit hooks, which are designed for the 'com
 The goal of this repository is to make it easy to set up the hooks using the existing scripts and to make it easy to customize for user repositories.
 
 
+Important notice:
+The repository must still use the .pre-commit-hooks.yaml file in the root directory, despite a different hook. This is due to the ```pre-commit``` script, which is not adapted here. However, since this is only necessary on the server side, it can be left as it is without local customization. 
+
 ## Installation
 
 In addition to the Python module `pre-commit`, the installation uses its own configuration via the new file `commit-msg-config.yaml`, where own hooks can be used in contrast to `pre-commit-config.yaml`. Since not all checks are required in a commit message, this can reduce complexity and error-proneness and increase the speed of the check.
@@ -15,12 +18,12 @@ Installation steps:
 
 1. ```brew install pre-commit```
 2. change to repository
-3. create and configure .pre-commit-config.yaml (see below)
-4. create and configure .commit-msg-config.yaml (see below)
-5. run ```pre-commit install```
-6. run ```pre-commit install --hook-type commit.msg```
+3. create and configure `.pre-commit-config.yaml` (see below)
+4. create and configure `.commit-msg-config.yaml` (see below)
+5. run `pre-commit install`
+6. run `pre-commit install --hook-type commit.msg`
 7. edit .git/hooks/commit-msg (see below)
-8. check configuration with ```.git/hooks/commit-msg .commit-msg-config.yaml```
+8. check configuration with `.git/hooks/commit-msg .commit-msg-config.yaml`
 
 ## Configuration
 

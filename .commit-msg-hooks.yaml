@@ -1,0 +1,13 @@
+# This configuration file allows our pre-commit hooks to be used with pre-commit: http://pre-commit.com/
+
+- id: shellcheck
+  name: Shellcheck Bash Linter
+  description: Performs linting on bash scripts
+  entry: hooks/shellcheck.sh
+  language: script
+
+- id: vkeycheck
+  name: vKey Checker
+  description: Performs vKey (security) check
+  entry: hooks/vkeycheck.sh
+  language: script
